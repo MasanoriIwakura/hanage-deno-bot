@@ -1,10 +1,9 @@
-import dayjs from "npm:dayjs@1.11.7";
 import stations, { Station } from "./stations.ts";
 
 export interface Schedule {
   station: Station;
-  from: Date;
-  to: Date;
+  from: string;
+  to: string;
 }
 
 export interface SchedulesOfMonth {
@@ -19,72 +18,72 @@ const schedules2023: SchedulesOfMonth = {
   1: [
     {
       station: stations.bakuroYokoyama,
-      from: dayjs("2023-01-04").toDate(),
-      to: dayjs("2023-01-08").toDate(),
+      from: "2023-01-04",
+      to: "2023-01-08",
     },
     {
       station: stations.ichigaya,
-      from: dayjs("2023-01-09").toDate(),
-      to: dayjs("2023-01-15").toDate(),
+      from: "2023-01-09",
+      to: "2023-01-15",
     },
     {
       station: stations.shinjukuSanchome,
-      from: dayjs("2023-01-16").toDate(),
-      to: dayjs("2023-01-22").toDate(),
+      from: "2023-01-16",
+      to: "2023-01-22",
     },
     {
       station: stations.ogawamachi,
-      from: dayjs("2023-01-23").toDate(),
-      to: dayjs("2023-01-29").toDate(),
+      from: "2023-01-23",
+      to: "2023-01-29",
     },
     {
       station: stations.bakuroYokoyama,
-      from: dayjs("2023-01-30").toDate(),
-      to: dayjs("2023-01-31").toDate(),
+      from: "2023-01-30",
+      to: "2023-01-31",
     },
   ],
   2: [
     {
       station: stations.bakuroYokoyama,
-      from: dayjs("2023-02-01").toDate(),
-      to: dayjs("2023-02-05").toDate(),
+      from: "2023-02-01",
+      to: "2023-02-05",
     },
     {
       station: stations.ichigaya,
-      from: dayjs("2023-02-09").toDate(),
-      to: dayjs("2023-02-15").toDate(),
+      from: "2023-02-09",
+      to: "2023-02-15",
     },
     {
       station: stations.shinjukuSanchome,
-      from: dayjs("2023-02-13").toDate(),
-      to: dayjs("2023-02-19").toDate(),
+      from: "2023-02-13",
+      to: "2023-02-19",
     },
     {
       station: stations.ogawamachi,
-      from: dayjs("2023-02-20").toDate(),
-      to: dayjs("2023-02-26").toDate(),
+      from: "2023-02-20",
+      to: "2023-02-26",
     },
     {
       station: stations.bakuroYokoyama,
-      from: dayjs("2023-02-27").toDate(),
-      to: dayjs("2023-02-28").toDate(),
+      from: "2023-02-27",
+      to: "2023-02-28",
     },
   ],
   3: [
     {
       station: stations.bakuroYokoyama,
-      from: dayjs("2023-03-01").toDate(),
-      to: dayjs("2023-03-05").toDate(),
+      from: "2023-03-01",
+      to: "2023-03-05",
     },
     {
       station: stations.ichigaya,
-      from: dayjs("2023-03-06").toDate(),
-      to: dayjs("2023-03-12").toDate(),
+      from: "2023-03-06",
+      to: "2023-03-12",
     },
     {
       station: stations.shinjukuSanchome,
-      from: dayjs("2023-03-13").toDate(),
-      to: dayjs("2023-03-19").toDate(),
+      from: "2023-03-13",
+      to: "2023-03-19",
     },
   ],
 };
