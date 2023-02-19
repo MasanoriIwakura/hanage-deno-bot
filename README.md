@@ -24,3 +24,11 @@ Hi! This is Hanage API for [ekibana](https://www.ekibana.com/)
 `v1/schedules/:year` : List of ekibana schedules of year.
 
 `v1/schedules/:year/:month` : List of ekibana schedules of month.
+
+examples
+```
+v1/schedules
+v1/schedules/2023
+v1/schedules/2023/01
+v1/schedules/2023/2
+```
