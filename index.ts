@@ -1,32 +1,18 @@
 import { serve } from "https://deno.land/std@0.157.0/http/server.ts";
+import { Context, Hono } from "https://deno.land/x/hono@v3.0.0/mod.ts";
+import v1Station from "./api/v1/station/index.ts";
+import v1Schedule from "./api/v1/schedule/index.ts";
+import v1ScheduleYear from "./api/v1/schedule/year.ts";
+import v1ScheduleMonth from "./api/v1/schedule/month.ts";
 
-const handler = async (request: Request): Promise<Response> => {
-  const requestUrl = new URL(request.url);
-  const pokemonNumber = requestUrl.searchParams.get("number");
+const v1 = new Hono();
+v1.get("/stations", (c: Context) => v1Station(c));
+v1.get("/schedules", (c: Context) => v1Schedule(c));
+v1.get("/schedules/:year", (c: Context) => v1ScheduleYear(c));
+v1.get("/schedules/:year/:month", (c: Context) => v1ScheduleMonth(c));
 
-  const url = `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}/`;
-  const resp = await fetch(url, {
-    headers: {
-      accept: "application/json",
-    },
-  });
+const app = new Hono();
+app.route("/v1", v1);
+app.get("/", (c) => c.text("Welcome to Hanage API!!"));
 
-  let body = `<p>Not Found. number: ${pokemonNumber}`;
-  if (resp.status === 200) {
-    const json = await resp.json();
-    body = `
-      <p>Id: ${json["id"]}</p>
-      <p>Name: ${json["name"]}</p>
-      <img src="${json["sprites"]["front_default"]}" alt="${json["name"]}">
-    `;
-  }
-
-  return new Response(body, {
-    status: resp.status,
-    headers: {
-      "content-type": "text/html",
-    },
-  });
-};
-
-serve(handler);
+serve(app.fetch);
