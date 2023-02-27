@@ -5,6 +5,8 @@ const CHANNEL_ACCESS_TOKEN = Deno.env.get("LINE_CHANNEL_ACCESS_TOKEN") || "";
 
 export default async function (c: Context) {
   const json = await c.req.json();
+  console.log(json);
+
   if (json.events.length > 0) {
     const message = json.events[0]?.message?.text;
     const replyMessage = hanageMessageActions(message);
@@ -55,8 +57,6 @@ const postReplyMessage = async (
       },
     ],
   };
-
-  console.log(body);
 
   return await fetch("https://api.line.me/v2/bot/message/reply", {
     method: "POST",
