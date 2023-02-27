@@ -10,10 +10,13 @@ export default async function (c: Context) {
   if (json.events.length > 0) {
     const message = json.events[0]?.message?.text;
     const replyMessage = hanageMessageActions(message);
-    await postReplyMessage(
-      replyMessage,
-      json.events[0]?.replyToken,
-    );
+
+    if (replyMessage !== null) {
+      await postReplyMessage(
+        replyMessage,
+        json.events[0]?.replyToken,
+      );
+    }
   }
 
   return c.text("Success.", 200);
@@ -23,9 +26,9 @@ const hanageMessageActions = (text: string | null) => {
   // TODO: other actions
   if (text?.includes("今月の鼻毛")) {
     return monthlyScheduleMessage();
-  } else {
-    return "「今月の鼻毛」とメッセージを送信すると今月のスケジュールを確認できます！";
   }
+
+  return null;
 };
 
 const monthlyScheduleMessage = () => {
