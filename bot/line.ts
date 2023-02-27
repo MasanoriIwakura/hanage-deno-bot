@@ -34,10 +34,10 @@ const monthlyScheduleMessage = () => {
   const thisMonth = now.getMonth() + 1;
 
   const monthlySchedules = schedules[thisYear][thisMonth];
-  let message = "[今月のスケジュール]\n";
+  let message = "[今月の鼻毛]\n";
   monthlySchedules.forEach((schedule, _index) => {
     message = message.concat(
-      `${schedule.from} ~ ${schedule.to} => ${schedule.station.name}\n`,
+      `U+1F4C5${schedule.from} ~ ${schedule.to}\nU+1F683${schedule.station.name}\n\n`,
     );
   });
 
