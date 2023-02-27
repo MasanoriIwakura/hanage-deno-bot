@@ -9,6 +9,18 @@ Hi! This is Hanage API for [ekibana](https://www.ekibana.com/)
 - Deno
 - Hono
 
+# Environments
+
+|Name|Description|Example|
+|:--|:--|:--|
+|LINE_CHANNEL_ACCESS_TOKEN|LINE channel access token||
+
+# Run
+
+```sh
+deno run --allow-net --allow-env --watch index.ts
+```
+
 # Endpoints
 
 ## v1
@@ -32,3 +44,13 @@ v1/schedules/2023
 v1/schedules/2023/01
 v1/schedules/2023/2
 ```
+
+# LINE Bot
+
+Sample request
+
+```sh
+curl -X POST http://localhost:8000/line-bot -H "Content-Type: application/json" -d '{"events": [{"message": {"text": "今月の鼻毛は？"}}]}'
+```
+
+<img src="./docs/images/hanage-bot.jpg" alt="hanage-bot" width="400">
