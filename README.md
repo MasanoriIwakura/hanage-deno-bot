@@ -52,3 +52,5 @@ Sample request
 ```sh
 curl -X POST http://localhost:8000/line-bot -H "Content-Type: application/json" -d '{"events": [{"message": {"text": "今月の鼻毛は？"}}]}'
 ```
+
+<img src="./docs/images/hanage-bot.jpg" alt="hanage-bot" width="400">
