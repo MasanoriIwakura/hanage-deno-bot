@@ -4,11 +4,6 @@ import schedules from "../hanage/schedules.ts";
 const CHANNEL_ACCESS_TOKEN = Deno.env.get("LINE_CHANNEL_ACCESS_TOKEN") || "";
 
 export default async function (c: Context) {
-  const contentType = c.req.header("Content-Type");
-  if (contentType !== "application/json") {
-    return c.text(`Unsupported Content-Type: ${contentType}`, 415);
-  }
-
   const json = await c.req.json();
   if (json.events.length > 0) {
     const message = json.events[0]?.message?.text;
