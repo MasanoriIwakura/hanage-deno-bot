@@ -37,7 +37,7 @@ const monthlyScheduleMessage = () => {
   let message = "[今月の鼻毛]\n";
   monthlySchedules.forEach((schedule, _index) => {
     message = message.concat(
-      `U+1F4C5${schedule.from} ~ ${schedule.to}\nU+1F683${schedule.station.name}\n\n`,
+      `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n\n`,
     );
   });
 
