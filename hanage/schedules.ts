@@ -93,3 +93,6 @@ const schedules: SchedulesOfYear = {
 };
 
 export default schedules;
+
+export const businessHours =
+  "月-金  12:00~20:00  土  11:00~19:00  日･祝  11:00~17:00";
