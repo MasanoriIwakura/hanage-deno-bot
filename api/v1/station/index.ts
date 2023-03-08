@@ -1,4 +1,4 @@
-import { Context } from "https://deno.land/x/hono@v3.0.0/mod.ts";
+import type { Context } from "../../../deps.ts";
 import stations from "../../../hanage/stations.ts";
 
 export default function (c: Context) {
