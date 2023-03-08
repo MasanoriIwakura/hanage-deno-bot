@@ -1,4 +1,4 @@
-import { Context } from "https://deno.land/x/hono@v3.0.0/mod.ts";
+import type { Context } from "../deps.ts";
 import schedules, { businessHours } from "../hanage/schedules.ts";
 
 const CHANNEL_ACCESS_TOKEN = Deno.env.get("LINE_CHANNEL_ACCESS_TOKEN") || "";

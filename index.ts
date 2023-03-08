@@ -1,5 +1,6 @@
-import { serve } from "https://deno.land/std@0.157.0/http/server.ts";
-import { Context, Hono } from "https://deno.land/x/hono@v3.0.0/mod.ts";
+import { serve } from "./deps.ts";
+import { Hono } from "./deps.ts";
+import type { Context } from "./deps.ts";
 import v1Station from "./api/v1/station/index.ts";
 import v1Schedule from "./api/v1/schedule/index.ts";
 import v1ScheduleYear from "./api/v1/schedule/year.ts";
