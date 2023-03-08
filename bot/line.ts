@@ -14,8 +14,6 @@ export default async function (c: Context) {
     if (replyMessage !== null) {
       await postReplyMessage(replyMessage, json.events[0]?.replyToken);
     }
-
-    return c.text(replyMessage, 200);
   }
 
   return c.text("Success.", 200);
