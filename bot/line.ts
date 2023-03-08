@@ -12,10 +12,7 @@ export default async function (c: Context) {
     const replyMessage = hanageMessageActions(message);
 
     if (replyMessage !== null) {
-      await postReplyMessage(
-        replyMessage,
-        json.events[0]?.replyToken,
-      );
+      await postReplyMessage(replyMessage, json.events[0]?.replyToken);
     }
   }
 
@@ -23,37 +20,41 @@ export default async function (c: Context) {
 }
 
 const hanageMessageActions = (text: string | null) => {
-  // TODO: other actions
-  if (text?.includes("今月の鼻毛")) {
-    return monthlyScheduleMessage();
-  }
-
-  return null;
-};
-
-const monthlyScheduleMessage = () => {
   const now = new Date();
   const thisYear = now.getFullYear();
   const thisMonth = now.getMonth() + 1;
 
-  const monthlySchedules = schedules[thisYear][thisMonth];
+  if (text?.includes("今月の鼻毛")) {
+    return monthlyScheduleMessage(thisYear, thisMonth);
+  }
 
-  let message = "[今月の鼻毛]\n";
-  monthlySchedules.forEach((schedule, _index) => {
-    message = message.concat(
-      `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n\n`,
-    );
-  });
+  if (text?.includes("来月の鼻毛")) {
+    const nextMonth = thisMonth + 1;
+    return monthlyScheduleMessage(thisYear, nextMonth);
+  }
 
-  message = message.concat(`[営業時間]\n${businessHours.join("\n")}`);
+  // TODO: other actions
 
-  return message;
+  return null;
 };
 
-const postReplyMessage = async (
-  message: string,
-  replyToken: string,
-) => {
+const monthlyScheduleMessage = (year, month) => {
+  const monthlySchedules = schedules[year][month];
+
+  const message = `[${month}月の鼻毛]\n`;
+  const businessHoursMessage = `[営業時間]\n${businessHours.join("\n")}`;
+  const monthlyScheduleMessage = monthlySchedules.reduce(
+    (prevValue, schedule) => {
+      const addText = `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n\n`;
+      return prevValue + addText;
+    },
+    ""
+  );
+
+  return message + monthlyScheduleMessage + businessHoursMessage;
+};
+
+const postReplyMessage = async (message: string, replyToken: string) => {
   const body = {
     replyToken,
     messages: [
