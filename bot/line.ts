@@ -1,5 +1,5 @@
 import { Context } from "https://deno.land/x/hono@v3.0.0/mod.ts";
-import schedules from "../hanage/schedules.ts";
+import schedules, { businessHours } from "../hanage/schedules.ts";
 
 const CHANNEL_ACCESS_TOKEN = Deno.env.get("LINE_CHANNEL_ACCESS_TOKEN") || "";
 
@@ -37,11 +37,15 @@ const monthlyScheduleMessage = () => {
   const thisMonth = now.getMonth() + 1;
 
   const monthlySchedules = schedules[thisYear][thisMonth];
-  let message = "[今月の鼻毛]\n";
-  monthlySchedules.forEach((schedule, _index) => {
+  let message = `[今月の鼻毛]\n ${businessHours}\n\n`;
+  monthlySchedules.forEach((schedule, index) => {
     message = message.concat(
-      `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n\n`,
+      `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n`,
     );
+
+    if (index !== monthlySchedules.length - 1) {
+      message = message.concat("\n");
+    }
   });
 
   return message;
