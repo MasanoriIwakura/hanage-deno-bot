@@ -45,7 +45,7 @@ const monthlyScheduleMessage = (year, month) => {
   const businessHoursMessage = `[営業時間]\n${businessHours.join("\n")}`;
   const monthlyScheduleMessage = monthlySchedules.reduce(
     (prevValue, schedule) => {
-      const addText = `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n`;
+      const addText = `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n\n`;
       return prevValue + addText;
     },
     ""
