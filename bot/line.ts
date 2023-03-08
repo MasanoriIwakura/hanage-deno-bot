@@ -14,6 +14,8 @@ export default async function (c: Context) {
     if (replyMessage !== null) {
       await postReplyMessage(replyMessage, json.events[0]?.replyToken);
     }
+
+    return c.text(replyMessage, 200);
   }
 
   return c.text("Success.", 200);
@@ -22,14 +24,14 @@ export default async function (c: Context) {
 const hanageMessageActions = (text: string | null) => {
   const now = new Date();
   const thisYear = now.getFullYear();
+  const thisMonth = now.getMonth() + 1;
 
   if (text?.includes("今月の鼻毛")) {
-    const thisMonth = now.getMonth() + 1;
     return monthlyScheduleMessage(thisYear, thisMonth);
   }
 
   if (text?.includes("来月の鼻毛")) {
-    const nextMonth = now.getMonth() + 1;
+    const nextMonth = thisMonth + 1;
     return monthlyScheduleMessage(thisYear, nextMonth);
   }
 
