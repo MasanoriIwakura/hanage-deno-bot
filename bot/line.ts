@@ -37,7 +37,8 @@ const monthlyScheduleMessage = () => {
   const thisMonth = now.getMonth() + 1;
 
   const monthlySchedules = schedules[thisYear][thisMonth];
-  let message = `[今月の鼻毛]\n ${businessHours}\n\n`;
+
+  let message = "[今月の鼻毛]\n";
   monthlySchedules.forEach((schedule, index) => {
     message = message.concat(
       `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n`,
@@ -47,6 +48,8 @@ const monthlyScheduleMessage = () => {
       message = message.concat("\n");
     }
   });
+
+  message = message.concat(`[営業時間]\n${businessHours.join("\n")}`);
 
   return message;
 };
