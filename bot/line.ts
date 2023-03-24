@@ -7,16 +7,17 @@ export default async function (c: Context) {
   const json = await c.req.json();
   console.log(json);
 
+  let replyMessage = null;
   if (json.events.length > 0) {
     const message = json.events[0]?.message?.text;
-    const replyMessage = hanageMessageActions(message);
+    replyMessage = hanageMessageActions(message);
 
     if (replyMessage !== null) {
       await postReplyMessage(replyMessage, json.events[0]?.replyToken);
     }
   }
 
-  return c.text("Success.", 200);
+  return c.text(replyMessage ?? "No message", 200);
 }
 
 const hanageMessageActions = (text: string | null) => {
