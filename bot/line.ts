@@ -23,15 +23,15 @@ export default async function (c: Context) {
 const hanageMessageActions = (text: string | null) => {
   const now = new Date();
   const thisYear = now.getFullYear().toString();
-  const thisMonth = (now.getMonth() + 1).toString();
+  const thisMonth = now.getMonth() + 1;
 
   if (text?.includes("今月の鼻毛")) {
-    return monthlyScheduleMessage(thisYear, thisMonth);
+    return monthlyScheduleMessage(thisYear, thisMonth.toString());
   }
 
   if (text?.includes("来月の鼻毛")) {
     const nextMonth = thisMonth + 1;
-    return monthlyScheduleMessage(thisYear, nextMonth);
+    return monthlyScheduleMessage(thisYear, nextMonth.toString());
   }
 
   // TODO: other actions
