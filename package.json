@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@playwright/test": "^1.34.3",
+    "reg-keygen-git-hash-plugin": "^0.12.1",
     "reg-notify-github-plugin": "^0.12.1",
     "reg-suit": "^0.12.1"
   },
