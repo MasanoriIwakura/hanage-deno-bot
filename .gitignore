@@ -1,1 +1,6 @@
 .DS_Store
+.reg
+node_modules
+/test-results/
+/playwright-report/
+/playwright/.cache/
