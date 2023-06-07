@@ -1,5 +1,6 @@
 name: Check calendar difference
 on:
+  workflow_dispatch:
   schedule:
     - cron: '24 * * * *'
 jobs:
