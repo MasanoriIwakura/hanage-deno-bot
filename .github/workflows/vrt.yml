@@ -1,0 +1,21 @@
+name: Check calendar difference
+on:
+  schedule:
+    - cron: '24 * * * *'
+jobs:
+  test:
+    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+    - name: Install dependencies
+      run: yarn
+    - name: Install Playwright Browsers
+      run: yarn playwright install --with-deps
+    - name: Take screenshot
+      run: yarn screenshot
+    - name: Run VRT
+      run: yarn vrt
