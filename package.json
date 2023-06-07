@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "reg-notify-github-plugin": "^0.12.1",
+    "reg-suit": "^0.12.1"
+  }
+}
