@@ -1,8 +1,8 @@
-name: Check calendar difference
+name: Compare calendar screenshot
 on:
   workflow_dispatch:
   schedule:
-    - cron: '24 * * * *'
+    - cron: '0 0 * * *'
 jobs:
   test:
     timeout-minutes: 120
@@ -16,7 +16,5 @@ jobs:
       run: yarn
     - name: Install Playwright Browsers
       run: yarn playwright install --with-deps
-    - name: Take screenshot
-      run: yarn screenshot
-    - name: Run VRT
-      run: yarn vrt
+    - name: Run test
+      run: yarn test
