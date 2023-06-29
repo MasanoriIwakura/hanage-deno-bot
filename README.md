@@ -8,12 +8,13 @@ Hi! This is Hanage API for [ekibana](https://www.ekibana.com/)
 
 - Deno
 - Hono
+- Yarn (test only)
 
 # Environments
 
-|Name|Description|Example|
-|:--|:--|:--|
-|LINE_CHANNEL_ACCESS_TOKEN|LINE channel access token||
+| Name                      | Description               | Example |
+| :------------------------ | :------------------------ | :------ |
+| LINE_CHANNEL_ACCESS_TOKEN | LINE channel access token |         |
 
 # Run
 
@@ -38,6 +39,7 @@ deno run --allow-net --allow-env --watch index.ts
 `v1/schedules/:year/:month` : List of ekibana schedules of month.
 
 examples
+
 ```
 v1/schedules
 v1/schedules/2023
@@ -54,3 +56,12 @@ curl -X POST http://localhost:8000/line-bot -H "Content-Type: application/json" 
 ```
 
 <img src="./docs/images/hanage-bot.jpg" alt="hanage-bot" width="400">
+
+# Test
+
+Compare local screenshot to [ekibana](https://www.ekibana.com/) calendar
+
+```sh
+yarn playwright install --with-deps
+yarn test
+```

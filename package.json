@@ -1,12 +1,10 @@
 {
   "devDependencies": {
     "@playwright/test": "^1.34.3",
-    "reg-notify-github-plugin": "^0.12.1",
-    "reg-suit": "^0.12.1"
+    "jimp": "^0.22.8"
   },
   "scripts": {
-    "screenshot": "playwright test tests/screenshot.spec.ts",
-    "vrt": "reg-suit run"
+    "test": "playwright test tests/screenshot.spec.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.8"

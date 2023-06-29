@@ -1,5 +1,6 @@
 .DS_Store
 .reg
+new_calendar.png
 node_modules
 /test-results/
 /playwright-report/
