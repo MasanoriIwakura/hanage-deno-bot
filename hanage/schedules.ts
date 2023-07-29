@@ -154,6 +154,11 @@ const schedules2023: SchedulesOfMonth = {
   ],
   7: [
     {
+      station: holiday,
+      from: "2023-07-01",
+      to: "2023-07-09",
+    },
+    {
       station: stations.ichigaya,
       from: "2023-07-10",
       to: "2023-07-16",
