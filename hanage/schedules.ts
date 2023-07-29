@@ -1,4 +1,4 @@
-import stations, { Station } from "./stations.ts";
+import { stations, holiday, Station } from "./stations";
 
 export interface Schedule {
   station: Station;
@@ -7,11 +7,11 @@ export interface Schedule {
 }
 
 export interface SchedulesOfMonth {
-  [month: string]: Schedule[];
+  [month: number]: Schedule[];
 }
 
 export interface SchedulesOfYear {
-  [year: string]: SchedulesOfMonth;
+  [year: number]: SchedulesOfMonth;
 }
 
 const schedules2023: SchedulesOfMonth = {
