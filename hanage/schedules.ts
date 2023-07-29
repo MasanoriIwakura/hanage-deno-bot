@@ -1,4 +1,4 @@
-import { stations, holiday, Station } from "./stations.ts";
+import stations, { holiday, Station } from "./stations.ts";
 
 export interface Schedule {
   station: Station;
