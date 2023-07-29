@@ -1,4 +1,4 @@
-import stations, { Station } from "./stations.ts";
+import { stations, holiday, Station } from "./stations";
 
 export interface Schedule {
   station: Station;
@@ -7,11 +7,11 @@ export interface Schedule {
 }
 
 export interface SchedulesOfMonth {
-  [month: string]: Schedule[];
+  [month: number]: Schedule[];
 }
 
 export interface SchedulesOfYear {
-  [year: string]: SchedulesOfMonth;
+  [year: number]: SchedulesOfMonth;
 }
 
 const schedules2023: SchedulesOfMonth = {
@@ -199,6 +199,28 @@ const schedules2023: SchedulesOfMonth = {
       station: stations.bakuroYokoyama,
       from: "2023-08-28",
       to: "2023-08-31",
+    },
+  ],
+  9: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2023-09-01",
+      to: "2023-09-03",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2023-09-04",
+      to: "2023-09-10",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2023-09-11",
+      to: "2023-09-17",
+    },
+    {
+      station: holiday,
+      from: "2023-09-18",
+      to: "2023-09-30",
     },
   ],
 };

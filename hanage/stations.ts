@@ -23,11 +23,14 @@ const bakuroYokoyama: Station = {
   name: "馬喰横山駅",
 };
 
-const stations = {
+export const holiday: Station = {
+  id: "0",
+  name: "休み",
+};
+
+export const stations = {
   shinjukuSanchome,
   ichigaya,
   ogawamachi,
   bakuroYokoyama,
 };
-
-export default stations;
