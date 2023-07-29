@@ -28,9 +28,11 @@ export const holiday: Station = {
   name: "休み",
 };
 
-export const stations = {
+const stations = {
   shinjukuSanchome,
   ichigaya,
   ogawamachi,
   bakuroYokoyama,
 };
+
+export default stations;
