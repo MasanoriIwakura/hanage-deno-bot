@@ -282,6 +282,33 @@ const schedules2023: SchedulesOfMonth = {
       to: "2023-11-30",
     },
   ],
+  12: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2023-12-01",
+      to: "2023-12-03",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2023-12-04",
+      to: "2023-12-10",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2023-12-11",
+      to: "2023-12-17",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2023-12-18",
+      to: "2023-12-24",
+    },
+    {
+      station: holiday,
+      from: "2023-12-25",
+      to: "2023-12-31",
+    },
+  ],
 };
 
 const schedules: SchedulesOfYear = {
