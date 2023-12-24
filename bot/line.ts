@@ -30,8 +30,13 @@ const hanageMessageActions = (text: string | null) => {
   }
 
   if (text?.includes("来月の鼻毛")) {
-    const nextMonth = thisMonth + 1;
-    return monthlyScheduleMessage(thisYear, nextMonth.toString());
+    let month = thisMonth + 1;
+    let year = thisYear;
+    if (month > 12) {
+      year = (Number(thisYear) + 1).toString();
+      month = 1;
+    }
+    return monthlyScheduleMessage(year, month.toString());
   }
 
   // TODO: other actions
@@ -46,11 +51,10 @@ const monthlyScheduleMessage = (year: string, month: string) => {
   const businessHoursMessage = `[営業時間]\n${businessHours.join("\n")}`;
   const monthlyScheduleMessage = monthlySchedules.reduce(
     (prevValue, schedule) => {
-      const addText =
-        `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n\n`;
+      const addText = `📅${schedule.from} ~ ${schedule.to}\n🚃${schedule.station.name}\n\n`;
       return prevValue + addText;
     },
-    "",
+    ""
   );
 
   return message + monthlyScheduleMessage + businessHoursMessage;
