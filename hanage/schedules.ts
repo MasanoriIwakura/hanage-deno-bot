@@ -388,6 +388,60 @@ const schedules2024: SchedulesOfMonth = {
       to: "2024-03-31",
     },
   ],
+  4: [
+    {
+      station: holiday,
+      from: "2024-04-01",
+      to: "2024-04-07",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2024-04-08",
+      to: "2024-04-14",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2024-04-15",
+      to: "2024-04-21",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2024-04-22",
+      to: "2024-04-28",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-04-29",
+      to: "2024-04-30",
+    },
+  ],
+  5: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-05-01",
+      to: "2024-05-05",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2024-05-06",
+      to: "2024-05-12",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2024-05-13",
+      to: "2024-05-19",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2024-05-20",
+      to: "2024-05-26",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-05-27",
+      to: "2024-05-31",
+    },
+  ],
 };
 
 const schedules: SchedulesOfYear = {
