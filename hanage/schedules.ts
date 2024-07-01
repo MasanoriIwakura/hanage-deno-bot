@@ -442,6 +442,82 @@ const schedules2024: SchedulesOfMonth = {
       to: "2024-05-31",
     },
   ],
+  6: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-06-01",
+      to: "2024-06-02",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2024-06-03",
+      to: "2024-06-09",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2024-06-10",
+      to: "2024-06-16",
+    },
+    {
+      station: holiday,
+      from: "2024-06-17",
+      to: "2024-06-30",
+    },
+  ],
+  7: [
+    {
+      station: holiday,
+      from: "2024-07-01",
+      to: "2024-07-07",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2024-07-08",
+      to: "2024-07-14",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2024-07-15",
+      to: "2024-07-21",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2024-07-22",
+      to: "2024-07-28",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-07-29",
+      to: "2024-07-31",
+    },
+  ],
+  8: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-08-01",
+      to: "2024-08-04",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2024-08-05",
+      to: "2024-08-11",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2024-08-12",
+      to: "2024-08-18",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2024-08-19",
+      to: "2024-08-25",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-08-26",
+      to: "2024-08-31",
+    },
+  ],
 };
 
 const schedules: SchedulesOfYear = {
