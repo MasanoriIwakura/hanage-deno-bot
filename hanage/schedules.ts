@@ -567,6 +567,33 @@ const schedules2024: SchedulesOfMonth = {
       to: "2024-10-31",
     },
   ],
+  11: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-11-01",
+      to: "2024-11-03",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2024-11-04",
+      to: "2024-11-10",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2024-11-11",
+      to: "2024-11-17",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2024-11-18",
+      to: "2024-11-24",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2024-11-25",
+      to: "2024-11-30",
+    },
+  ],
 };
 
 const schedules: SchedulesOfYear = {
