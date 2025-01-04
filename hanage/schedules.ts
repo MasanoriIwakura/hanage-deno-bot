@@ -623,9 +623,40 @@ const schedules2024: SchedulesOfMonth = {
   ],
 };
 
+const schedules2025: SchedulesOfMonth = {
+  1: [
+    {
+      station: holiday,
+      from: "2025-01-01",
+      to: "2025-01-05",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2025-01-06",
+      to: "2025-01-12",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2025-01-13",
+      to: "2025-01-19",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2025-01-20",
+      to: "2025-01-26",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2025-01-27",
+      to: "2025-01-31",
+    },
+  ],
+};
+
 const schedules: SchedulesOfYear = {
   2023: schedules2023,
   2024: schedules2024,
+  2025: schedules2025,
 };
 
 export default schedules;
