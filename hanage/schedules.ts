@@ -651,6 +651,33 @@ const schedules2025: SchedulesOfMonth = {
       to: "2025-01-31",
     },
   ],
+  2: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2025-02-01",
+      to: "2025-02-02",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2025-02-03",
+      to: "2025-02-09",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2025-02-10",
+      to: "2025-02-16",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2025-02-17",
+      to: "2025-02-23",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2025-02-24",
+      to: "2025-02-29",
+    },
+  ],
 };
 
 const schedules: SchedulesOfYear = {
