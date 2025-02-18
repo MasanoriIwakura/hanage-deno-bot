@@ -1,4 +1,4 @@
-import { SchedulesOfMonth } from "..";
+import { SchedulesOfMonth } from "../";
 import stations, { holiday } from "../../stations";
 
 export const schedules2024: SchedulesOfMonth = {
