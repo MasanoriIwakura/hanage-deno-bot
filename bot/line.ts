@@ -1,5 +1,8 @@
 import type { Context } from "../deps.ts";
-import schedules, { businessHours, Schedule } from "../hanage/schedules.ts";
+import schedules, {
+  businessHours,
+  Schedule,
+} from "../hanage/schedules/index.ts";
 
 const CHANNEL_ACCESS_TOKEN = Deno.env.get("LINE_CHANNEL_ACCESS_TOKEN") || "";
 
