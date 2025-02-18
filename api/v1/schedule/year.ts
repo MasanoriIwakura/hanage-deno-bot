@@ -1,5 +1,5 @@
 import type { Context } from "../../../deps.ts";
-import schedules from "../../../hanage/schedules.ts";
+import schedules from "../../../hanage/schedules/index.ts";
 
 export default function (c: Context) {
   const year = c.req.param("year");
