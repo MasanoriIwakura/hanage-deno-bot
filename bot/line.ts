@@ -10,7 +10,7 @@ export default async function (c: Context) {
   const json = await c.req.json();
   console.log(json);
 
-  let replyMessage = null;
+  let replyMessage: string | null = null;
   if (json.events.length > 0) {
     const message = json.events[0]?.message?.text;
     replyMessage = hanageMessageActions(message);
@@ -77,7 +77,8 @@ const monthlyScheduleMessage = (year: string, month: string) => {
     ""
   );
 
-  return message + monthlyScheduleMessage + businessHoursMessage;
+  const resultMessage = message + monthlyScheduleMessage + businessHoursMessage;
+  return resultMessage || "No schedule";
 };
 
 const daylyScheduleMessage = (year: string, month: string, day: string) => {
