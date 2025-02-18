@@ -1,5 +1,5 @@
-import { SchedulesOfMonth } from "../index";
-import stations, { holiday } from "../../stations";
+import { SchedulesOfMonth } from "../index.ts";
+import stations, { holiday } from "../../stations.ts";
 
 export const schedules2023: SchedulesOfMonth = {
   1: [
