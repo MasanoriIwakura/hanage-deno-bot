@@ -78,4 +78,31 @@ export const schedules2025: SchedulesOfMonth = {
       to: "2025-03-31",
     },
   ],
+  4: [
+    {
+      station: holiday,
+      from: "2025-04-01",
+      to: "2025-04-06",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2025-04-07",
+      to: "2025-04-13",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2025-04-14",
+      to: "2025-04-20",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2025-04-21",
+      to: "2025-04-27",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2025-04-28",
+      to: "2025-04-30",
+    },
+  ],
 };
