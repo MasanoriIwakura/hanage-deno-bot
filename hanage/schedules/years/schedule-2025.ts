@@ -154,4 +154,75 @@ export const schedules2025: SchedulesOfMonth = {
       to: "2025-06-30",
     },
   ],
+  7: [
+    {
+      station: holiday,
+      from: "2025-07-01",
+      to: "2025-07-06",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2025-07-07",
+      to: "2025-07-13",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2025-07-14",
+      to: "2025-07-20",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2025-07-21",
+      to: "2025-07-27",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2025-07-28",
+      to: "2025-07-31",
+    },
+  ],
+  8: [
+    {
+      station: stations.bakuroYokoyama,
+      from: "2025-08-01",
+      to: "2025-08-03",
+    },
+    {
+      station: stations.ichigaya,
+      from: "2025-08-04",
+      to: "2025-08-10",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2025-08-11",
+      to: "2025-08-17",
+    },
+    {
+      station: stations.ogawamachi,
+      from: "2025-08-18",
+      to: "2025-08-24",
+    },
+    {
+      station: stations.bakuroYokoyama,
+      from: "2025-08-25",
+      to: "2025-08-31",
+    },
+  ],
+  9: [
+    {
+      station: stations.ichigaya,
+      from: "2025-09-01",
+      to: "2025-09-07",
+    },
+    {
+      station: stations.shinjukuSanchome,
+      from: "2025-09-08",
+      to: "2025-09-14",
+    },
+    {
+      station: holiday,
+      from: "2025-09-15",
+      to: "2025-09-30",
+    },
+  ],
 };
